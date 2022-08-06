@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Manrope&display=swap');
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Manrope;
+    
+    
+}
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y:scroll;
+    height: 100vh;
+}
+h1, h2{
+    font-family: Inter;
+    color: white
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+
+
+.one{
+    background-color: rgb(156,175,136);
+}
+
+.two{
+    background-color: #B0808C;
+}
+
+.three{
+    background-color: rgb(156,175,136);
+}
+
+.four{
+    background-color: #B0808C;
+}
+
+
+
+
+
+
+
+@media(max-width: 760px) {
+
+.one{
+    display: grid;
+    grid-template-columns: 50% 15% 15% 10% 10%;
+        grid-template-rows: 25% 24% 2% 24% 25%;
+        grid-template-areas: 
+        ". . . . ."
+        "title1 title1 . . ."
+        ". . img . ."
+        "title2 title2 img . ."
+        "txt txt . . ."
+    ;
+}
+
+.firsttitle{
+    font-size: 2.5rem;
+    grid-area: title1;
+    justify-self: right;
+    align-self: end;
+    letter-spacing: 3px;
+    width: min-content;
+    color: #E8DEFC;
+}
+
+.secondtitle{
+    font-size: 2.5rem;
+    grid-area: title2;
+    justify-self: center;
+    margin-left: 1.2em;
+    align-self: start;
+    letter-spacing: 3px;
+    width: min-content;
+    color: #B0808C
+}
+
+
+.titleimg{
+    grid-area: img;
+    justify-self: center;
+    align-self: start;
+}
+
+.subtext{
+    color: white;
+    grid-area: txt;
+    align-self: end;
+    justify-self: right;
+    margin-right: 1em;
+    margin-bottom: 1.5em;
+}
+
+
+
+
+h2{
+    padding-top: 2em;
+    text-align: center;
+    width: 100%;
+    color: #E8DEFC;
+    font-size: 2rem;
+}
+
+.map{
+    width: 95%;
+    margin-left: 0.5em;
+    margin-top: 1.5em;
+    box-shadow: 10px 10px 8px #888888;
+}
+.container3{
+    margin-top: 2.5em;
+}
+.container2{
+    font-size: 0.9rem;
+    color: #E8DEFC;
+    background-color: rgb(156,175,136) ;
+    width: 25.12em;
+    padding-left: 0.82em;
+    padding-top: 1em;
+    padding-right: 0.22em;
+    margin-left: 0.9em;
+    height: 24em;
+    line-height: 1.5em;
+    overflow: hidden;
+    max-height:0;
+    transition: max-height 0.2s;
+}
+
+.expandbutton{
+    margin-top: 2em;
+    display: block;
+    width: 27.1em;
+    margin-left: 1em;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(156,175,136);
+    color:#E8DEFC ;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.expandbutton::after{
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+}
+
+.expandbutton--active {background-color:rgb(146,165,126) ;}
+.expandbutton--active::after {content: '\25b4'}
+
+.container2 p{
+    font-size: 1.2rem;
+}
+
+
+.rect{
+    transform: scale(0.6);
+    overflow: none;
+}
+.container4 p{
+    font-size: 1.3em;
+    color: #E8DEFC;
+    margin-top: 2em;
+}
+
+.container4 li{
+    color: #E8DEFC;
+}
+
+.container4 ol{
+    margin-left: 2em;
+    margin-top: 0.1em;
+}
+.container4{
+    width: 25.12em;
+    height: 30em;
+    padding-left: 2em;
+}
+
+.army{
+    transform: scale(1.2);
+    margin-top: 2em;
+
+}
+
+.army2{
+    transform: scale(0.8);
+    margin-bottom: 2em;
+}
+
+.malas{
+    transform: scale(0.9);
+}
+}
+
+
+@media(min-width: 761px) {
+
+    .one{
+        display: grid;
+        grid-template-columns:35% 20% 20% 15% ;
+        grid-template-rows: 30% 40% 30%;
+        grid-template-areas: 
+        ". . . ."
+        "title1 title2 img ."
+        ". txt . ."
+    ;
+    }
+    .firsttitle{
+        font-size: 2.5rem;
+        grid-area: title1;
+        justify-self: right;
+        align-self: center;
+        letter-spacing: 3px;
+        width: min-content;
+    }
+    
+    .secondtitle{
+        font-size: 2.5rem;
+        grid-area: title2;
+        justify-self: left;
+        margin-left: 0.5em;
+        align-self: center;
+        letter-spacing: 3px;
+        width: min-content;
+    }
+
+    .titleimg{
+        grid-area: img;
+        justify-self: left;
+        align-self: center;
+        margin-left: 1em;
+    }
+
+    .subtext{
+        color: white;
+        grid-area: txt;
+        align-self: end;
+        justify-self: right;
+        margin-right: 1em;
+        margin-bottom: 1.5em;
+    }
+    }
